@@ -103,7 +103,7 @@ const Header = () => {
             >
               Shop
             </Link>
-            <Link href="../Pages/Product" className="block hover:underline">
+            <Link href="../Product" className="block hover:underline">
               Product
             </Link>
             <Link href="/" className="block hover:underline">
