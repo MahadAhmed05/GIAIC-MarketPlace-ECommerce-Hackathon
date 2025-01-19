@@ -1,11 +1,18 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import LogoIcon from "../Images/Logo Icon.png";
 import CartLogo from "../Images/cart-logo.png";
+import { CartContext } from "../components/CartContext"; // Adjust the path based on your file structure
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Access the cart context
+  const context = useContext(CartContext);
+
+  // If context is available, extract cart, otherwise fallback to an empty array
+  const cartItemCount = context ? context.cart.length : 0;
 
   return (
     <header className="w-full">
@@ -56,7 +63,7 @@ const Header = () => {
                 <span className="text-sm">Cart</span>
               </button>
               <span className="absolute top-0 right-0 bg-teal-500 text-white text-xs rounded-full px-1.5">
-                2
+                {cartItemCount} {/* Dynamic cart item count */}
               </span>
             </div>
           </Link>
@@ -85,6 +92,7 @@ const Header = () => {
             Studio
           </Link>
         </nav>
+        
         {/* Contact - Right side */}
         <div className="w-45 h-8">Contact: (805) 555-0111</div>
       </div>

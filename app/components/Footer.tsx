@@ -130,7 +130,7 @@ const Footer = () => {
 
         {/* Footer Bottom Section */}
         <div className="mt-8 flex flex-col lg:flex-row justify-between items-center text-sm text-gray-500">
-          <p>© 2021 - Blogy - Designed & Developed by Zakirsoft</p>
+          <p>© 2021 - Blogy - Designed & Developed by Muhammad Mahad Ahmed</p>
           <div className="w-[40] h-[8] mt-4 "></div>
         </div>
       </div>
