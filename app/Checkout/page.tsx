@@ -232,7 +232,7 @@
 
 import { useContext, useState } from "react";
 import { CartContext } from "../components/CartContext";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 
 const CheckoutPage = () => {
   const { cart } = useContext(CartContext)!;
@@ -282,7 +282,7 @@ const CheckoutPage = () => {
       const data = await response.json();
       if (response.ok) {
         setOrderStatus("Order Placed Successfully!");
-        console.log(orderData,"Order data")
+        // console.log(orderData,"Order data")
         // router.push("/thank-you");
       } else {
         setOrderStatus(`Failed to place order: ${data.error}`);
