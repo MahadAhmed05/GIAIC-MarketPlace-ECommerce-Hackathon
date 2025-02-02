@@ -244,7 +244,7 @@ const CheckoutPage = () => {
     country: "",
   });
   const [orderStatus, setOrderStatus] = useState("");
-  const router = useRouter();
+  // const router = useRouter();
 
   const totalPrice = cart.reduce(
     (total, item) => total + item.price * item.quantity,
