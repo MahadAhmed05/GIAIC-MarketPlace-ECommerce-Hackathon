@@ -288,6 +288,8 @@ const CheckoutPage = () => {
         setOrderStatus(`Failed to place order: ${data.error}`);
       }
     } catch (error) {
+      console.log(error);
+
       setOrderStatus("An error occurred while placing the order.");
     }
   };
